@@ -88,6 +88,7 @@ class GUIUniApp:
     def remove_subject(self):
         remove_window = tk.Toplevel(self.master)
         remove_window.title("Remove Subject")
+        remove_window.geometry("300x100")
 
         tk.Label(remove_window, text="Enter Subject ID to remove:").pack()
         subject_id_entry = tk.Entry(remove_window)
@@ -107,6 +108,7 @@ class GUIUniApp:
     def change_password(self):
         pw_window = tk.Toplevel(self.master)
         pw_window.title("Change Password")
+        pw_window.geometry("300x150")
 
         tk.Label(pw_window, text="New Password:").pack()
         new_pw_entry = tk.Entry(pw_window, show="*")
