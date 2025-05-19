@@ -84,3 +84,10 @@ class StudentController:
 
     def student_exists(self, name):
         return any(s.name == name for s in self.students)
+    
+    def verify_password(self, email, input_password):
+
+        for s in self.students:
+            if s.email == email:
+                return s.password == input_password
+        return False

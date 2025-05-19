@@ -130,7 +130,13 @@ def student_menu():
                 if not controller.validate_credentials(email, password):
                     print(Fore.RED + FIRST_INDENTATION + "Incorrect email or password format." + Style.RESET_ALL)
                     continue
+                
+                if not controller.verify_password(email, password) :
+                    print(Fore.RED + FIRST_INDENTATION + "Incorrect password or email" + Style.RESET_ALL)
+                    continue
                 break
+                
+
 
             print(Fore.YELLOW + FIRST_INDENTATION + "Email and password formats acceptable" + Style.RESET_ALL)
             student = controller.login(email, password)
