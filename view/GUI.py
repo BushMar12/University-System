@@ -64,11 +64,11 @@ class GUIUniApp:
 
         tk.Label(self.master, text=f"Welcome {self.logged_in_student.name}").pack(pady=10)
 
-        tk.Button(self.master, text="Enrol Subject", command=self.enrol_subject).pack(pady=5)
-        tk.Button(self.master, text="Show Subjects", command=self.show_subjects).pack(pady=5)
-        tk.Button(self.master, text="Remove Subject", command=self.remove_subject).pack(pady=5)
-        tk.Button(self.master, text="Change Password", command=self.change_password).pack(pady=5)
-        tk.Button(self.master, text="Logout", command=self.logout).pack(pady=5)
+        tk.Button(self.master, text="Enrol Subject", command=self.enrol_subject, width=20).pack(padx=20, pady=5)
+        tk.Button(self.master, text="Show Subjects", command=self.show_subjects, width=20).pack(padx=20, pady=5)
+        tk.Button(self.master, text="Remove Subject", command=self.remove_subject, width=20).pack(padx=20, pady=5)
+        tk.Button(self.master, text="Change Password", command=self.change_password, width=20).pack(padx=20, pady=5)
+        tk.Button(self.master, text="Logout", command=self.logout, width=20).pack(padx=20, pady=5)
 
     def enrol_subject(self):
         subject = self.subject_controller.enrol_subject(self.logged_in_student)
